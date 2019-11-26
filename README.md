@@ -5,7 +5,7 @@
 2. 그린 그림 저장
 
 ### 결과
-![result](https://github.com/hhj227/Paint-JS/image/result.gif)
+![result](https://github.com/hhj227/Paint-JS/blob/master/image/result.gif)
 
 
 ### 개발 계기
