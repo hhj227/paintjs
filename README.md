@@ -1,15 +1,11 @@
-# Paint-JS
+# 그림판 사이트
 
-## 그림판 사이트
-### 기능
+## 기능
 1. 다양한 색으로 그림 그리기
 2. 그린 그림 저장
 
-### 실행 방법
-
-
 ### 결과
-
+![result](https://github.com/hhj227/Paint-JS/image/result.gif)
 
 
 ### 개발 계기
