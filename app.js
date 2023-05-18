@@ -6,7 +6,7 @@ const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "#2c2c2c";
-const CANVAS_SIZE = 700;
+const CANVAS_SIZE = 800;
 
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
@@ -29,8 +29,8 @@ function startPainting(event){
 }
 
 function onMouseMove(event){
-    const x = event.offsetX;
-    const y = event.offsetY;
+    const x = event.offsetX+5;
+    const y = event.offsetY+25;
     if(!painting) {
         ctx.beginPath();
         ctx.moveTo(x, y);
