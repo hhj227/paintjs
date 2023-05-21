@@ -30,6 +30,18 @@
             <div class="controls__color jsColor" style="background-color: #5856d6"></div>
         </div>
     </div>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="이미지 검색어를 입력하세요">
+        <button type="submit">검색</button>
+    </form>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var query = document.getElementById("searchInput").value;
+            var searchURL = "https://www.google.com/search?tbm=isch&q=" + encodeURIComponent(query);
+            window.location.href = searchURL;
+        });
     <script src="app.js"></script>
 </body>
 </html>
