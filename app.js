@@ -4,6 +4,8 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const eraseBtn = document.getElementById("jsErase"); // 추가된 코드: 지우개 버튼 요소
+
 
 const INITIAL_COLOR = "#2c2c2c";
 const CANVAS_SIZE = 800;
@@ -19,6 +21,7 @@ ctx.lineWidth = 2.5;
 
 let painting = false;
 let filling = false;
+let erasing = false; // 추가된 코드: 지우개 동작 여부를 나타내는 변수
 
 function stopPainting(event){
     painting = false;
@@ -34,6 +37,9 @@ function onMouseMove(event){
     if(!painting) {
         ctx.beginPath();
         ctx.moveTo(x, y);
+    } else
+        if (erasing) { // 추가된 코드: 지우개 모드일 때
+            ctx.clearRect(x, y, ctx.lineWidth, ctx.lineWidth); // 현재 위치에서 정해진 크기만큼 캔버스를 지움
     } else {
         ctx.lineTo(x, y);
         ctx.stroke();
@@ -78,6 +84,17 @@ function handleSaveClick(){
     link.download = "PaintJS[🖼]";
     link.click();
 }
+function handleEraseClick() { // 추가된 코드: 지우개 버튼 클릭 시 호출되는 함수
+    if (erasing) {
+        erasing = false;
+        eraseBtn.classList.remove("active");
+    } else {
+        erasing = true;
+        eraseBtn.classList.add("active");
+        filling = false; // 지우개 모드일 때는 채우기 모드를 해제
+        mode.innerText = "Fill";
+    }
+}
 
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
@@ -100,4 +117,8 @@ if(mode){
 
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveClick);
+}
+
+if (eraseBtn) {
+    eraseBtn.addEventListener("click", handleEraseClick);
 }
