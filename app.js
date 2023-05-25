@@ -5,6 +5,7 @@ const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 const eraseBtn = document.getElementById("jsErase"); // 추가된 코드: 지우개 버튼 요소
+const resetBtn = document.getElementById("jsReset"); // 추가된 코드: 초기화 버튼 요소
 
 
 const INITIAL_COLOR = "#2c2c2c";
@@ -39,7 +40,7 @@ function onMouseMove(event){
         ctx.moveTo(x, y);
     } else
         if (erasing) { // 추가된 코드: 지우개 모드일 때
-            ctx.clearRect(x, y, ctx.lineWidth, ctx.lineWidth); // 현재 위치에서 정해진 크기만큼 캔버스를 지움
+            ctx.clearRect(x, y, ctx.lineWidth+10, ctx.lineWidth+10); // 현재 위치에서 정해진 크기만큼 캔버스를 지움
     } else {
         ctx.lineTo(x, y);
         ctx.stroke();
@@ -88,11 +89,14 @@ function handleEraseClick() { // 추가된 코드: 지우개 버튼 클릭 시 �
     if (erasing) {
         erasing = false;
         eraseBtn.classList.remove("active");
+         eraseBtn.style.backgroundColor = "white";
     } else {
         erasing = true;
         eraseBtn.classList.add("active");
         filling = false; // 지우개 모드일 때는 채우기 모드를 해제
         mode.innerText = "Fill";
+        canvas.classList.add("eraser-cursor");  // 지우개 커서 이미지로 변경
+        eraseBtn.style.backgroundColor = "gray";
     }
 }
 
@@ -122,3 +126,7 @@ if(saveBtn){
 if (eraseBtn) {
     eraseBtn.addEventListener("click", handleEraseClick);
 }
+if (resetBtn) {
+    resetBtn.addEventListener("click", handleResetClick);
+}
+
