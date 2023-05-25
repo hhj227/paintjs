@@ -23,6 +23,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.canvas.eraser-cursor {
+    cursor: url(./cursor2.cur), auto;
+}
 
 .controls .controls__colors {
     display: flex; /* 가로 */
