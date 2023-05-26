@@ -77,6 +77,11 @@ function handleCanvasClick(){
 function handleCM(){
     event.preventDefault();
 }
+function handleResetClick() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
 function handleSaveClick(){
     const image = canvas.toDataURL();
@@ -89,13 +94,14 @@ function handleEraseClick() { // 추가된 코드: 지우개 버튼 클릭 시 �
     if (erasing) {
         erasing = false;
         eraseBtn.classList.remove("active");
-         eraseBtn.style.backgroundColor = "white";
+        eraseBtn.style.backgroundColor = "white";
+        canvas.style.cursor = "url(./cursor.cur), auto";
     } else {
         erasing = true;
         eraseBtn.classList.add("active");
         filling = false; // 지우개 모드일 때는 채우기 모드를 해제
         mode.innerText = "Fill";
-        canvas.classList.add("eraser-cursor");  // 지우개 커서 이미지로 변경
+        canvas.style.cursor = "url(./cursor2.cur), auto";  // 지우개 커서 이미지로 변경
         eraseBtn.style.backgroundColor = "gray";
     }
 }
