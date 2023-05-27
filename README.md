@@ -6,18 +6,18 @@
 3. 사진 파일을 불러와 테두리만 추출하여 사용자가 따라 그릴 수 있게 함
 4. 리셋 버튼을 통해 캔버스를 한번에 초기화 가능
 
+
 ### 개발 계기
 사용자들이 그림판을 이용함에 있어 그림 실력과 상관없이 자신이 원하는 그림을 그릴 수 있게 하기 위해 계발
 
 
-
 #### 사용한 오픈소스
-https://github.com/hhj227/Paint-JS
-https://discord.com/channels/@me/1105121271706034196/1111993820314345543
+1.https://github.com/hhj227/Paint-JS
+2.https://github.com/josephrocca/image-to-line-art-js
 
 
 
-### 개발 순서
+### 프로젝트 시 추가한 내용
 1. index.html, style.css, app.js 생성
 2. reset.js(https://meyerweb.com/eric/tools/css/reset/) 인터넷에서 가져와서 style.css에서 import 시키기
 3. 기본 화면 만들기
