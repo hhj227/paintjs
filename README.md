@@ -12,8 +12,8 @@
 
 
 #### 사용한 오픈소스
-1.https://github.com/hhj227/Paint-JS
-2.https://github.com/josephrocca/image-to-line-art-js
+1. https://github.com/hhj227/Paint-JS 
+2. https://github.com/josephrocca/image-to-line-art-js
 
 
 
