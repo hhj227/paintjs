@@ -1,27 +1,21 @@
-# 그림판 사이트
+# IMAGE to SKETCH
 
 ## 기능
 1. 다양한 색으로 그림 그리기
 2. 그린 그림 저장
-
-### 결과
-![result](https://github.com/hhj227/Paint-JS/blob/master/image/result.gif)
-
+3. 사진 파일을 불러와 테두리만 추출하여 사용자가 따라 그릴 수 있게 함
+4. 리셋 버튼을 통해 캔버스를 한번에 초기화 가능
 
 ### 개발 계기
-웹 개발에 대해 학습하고 JavaScript를 배우기 위해 개발
+사용자들이 그림판을 이용함에 있어 그림 실력과 상관없이 자신이 원하는 그림을 그릴 수 있게 하기 위해 계발
 
-#### 학습 방법
-Nomad Coders 유튜브에서 강의를 들으며 공부
-- 출처: https://academy.nomadcoders.co
 
-#### 준비물
- - Visual Studio Code
- - Chrome
- - Github
 
-#### Open Source
-- CSS Tools: Reset CSS https://meyerweb.com/eric/tools/css/reset/
+#### 사용한 오픈소스
+https://github.com/hhj227/Paint-JS
+https://discord.com/channels/@me/1105121271706034196/1111993820314345543
+
+
 
 ### 개발 순서
 1. index.html, style.css, app.js 생성
