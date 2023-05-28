@@ -1,5 +1,8 @@
 # IMAGE to SKETCH
 
+## 완성 화면
+![image](https://github.com/bullrock33/Paint/assets/129020496/b1000140-da77-452d-9688-b47f882c0f3d)
+
 ## 기능
 1. 다양한 색으로 그림 그리기
 2. 그린 그림 저장
