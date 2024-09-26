@@ -1,47 +1,42 @@
-# 그림판 사이트
+# IMAGE to SKETCH
+
+## 완성 화면
+![image](https://github.com/bullrock33/Paint/assets/129020496/b1000140-da77-452d-9688-b47f882c0f3d)
 
 ## 기능
 1. 다양한 색으로 그림 그리기
 2. 그린 그림 저장
-
-### 결과
-![result](https://github.com/hhj227/Paint-JS/blob/master/image/result.gif)
+3. 사진 파일을 불러와 테두리만 추출하여 사용자가 따라 그릴 수 있게 함
+4. 리셋 버튼을 통해 캔버스를 한번에 초기화 가능
 
 
 ### 개발 계기
-웹 개발에 대해 학습하고 JavaScript를 배우기 위해 개발
-
-#### 학습 방법
-Nomad Coders 유튜브에서 강의를 들으며 공부
-- 출처: https://academy.nomadcoders.co
-
-#### 준비물
- - Visual Studio Code
- - Chrome
- - Github
-
-#### Open Source
-- CSS Tools: Reset CSS https://meyerweb.com/eric/tools/css/reset/
-
-### 개발 순서
-1. index.html, style.css, app.js 생성
-2. reset.js(https://meyerweb.com/eric/tools/css/reset/) 인터넷에서 가져와서 style.css에서 import 시키기
-3. 기본 화면 만들기
-   1. Background Color 입히기
-   2. Canvas 생성
-   3. 팔레트 생성
-   4. 붓사이즈 변경을 위한 range 생성(https://www.w3schools.com/tags/att_input_type_range.asp)
-   5. 채우기, 저장 버튼 생성
-   6. 그림자, 모서리 처리 등 스타일링
-4. 그림 그리기
-   1. Canvas 위에 마우스를 위치했을 때 x, y 좌표 얻기
-   2. 캔버스를 마우스로 클릭하는 순간과 떼는 순간을 감지하여 painting이 true 상태일때 x,y좌표의 픽셀에 색 입히기
-   3. 색 버튼 클릭하면 RGB color 바꿔조기
-   4. range 값에 따라 픽셀 사이즈 조절하여 붓 크기 조절하기
-   5. 배경화면 색 채우기
-      1. paint, fill 버튼 토글시키기
-      2. 버튼이 fill 상태일 때 색 버튼 클릭하면 선택한 색으로 배경화면 채우기
-5. 그림 저장하기
-   1. image를 dataURL로 바꾸어 저장한다.
+사용자들이 그림판을 이용함에 있어 그림 실력과 상관없이 자신이 원하는 그림을 그릴 수 있게 하기 위해 계발
 
 
+#### 사용한 오픈소스
+1. https://github.com/hhj227/Paint-JS 
+2. https://github.com/josephrocca/image-to-line-art-js
+
+
+
+### 프로젝트 시 추가한 내용
+1. 지우개 기능
+   1. 그린 그림을 지울 수 있는 지우개 기능 생성
+   2. 지우개 커서 디자인 생성 
+   (원본의 오픈소스에는 없었던 지우개 기능을 추가하면서 지우개 커서 디자인을 함)
+2. 리셋 기능
+   1. 그린 그림을 모두 지우고 초기의 상태로 되돌려줌
+   2. 모든 내용이 삭제 되므로 주의가 필요함
+3. 이미지 검색 기능
+   1. 이미지 키워드를 검색하면 구글 검색창을 이용하여 알맞은 사진을 띄워줌
+   2. 스케치 기능에 필요한 그림 사진을 찾아줄 때 용이함
+4. 이미지 스케치 기능
+   1. 원하는 그림 파일 선택을 하면 그림의 테두리를 그려주는 기능
+   2. 테두리를 그려준 그림에 내가 원하는 채색을 넣는데 유용함  
+5. 디자인 개선
+   1. 기존의 디자인에서 프로젝트 중 추가한 기능이 돋보이도록 개선
+6. 웹호스팅 기능 추가
+   1. 사용자들이 Github에 접속하지 않더라도 주소 입력을 통해 해당 그림판 프로그램을 쉽게 사용할 수 있게 함
+
+   
